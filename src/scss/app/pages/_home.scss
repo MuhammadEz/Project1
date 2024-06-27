@@ -1,0 +1,662 @@
+
+/*=====================================
+        Overlay Start Here
+=====================================*/
+
+.overlay-main{
+    .offcanvas{
+        background-color: $Black;
+        .offcanvas-header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px;
+            .logo-otr{
+                .logo{
+                    width: 90px;
+                    height: 36px;
+                    object-fit: contain;
+                }
+            }
+            .close-icon-otr{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 52px;
+                height: 52px;
+                background-color: $Primary-color-10;
+                transition: .3s;
+                &:hover{
+                    background-color: $Primary-color;
+                    .close-icon{
+                        color: $Black;
+                    }
+                }
+                .close-icon{
+                    font-size: 24px;
+                    color: $Primary-color;
+                    transition: .3s;
+                }
+            }
+        }
+        .offcanvas-body{
+            padding: 0 24px 24px 24px;
+            .menu-otr{
+                margin-bottom: 36px;
+                .menu-ul{
+                    .menu-li{
+                        &:not(:last-child){
+                            margin-bottom: 6px;
+                        }
+                        .menu-a{
+                            color: $Primary-color-40;
+                            transition: .3s;
+                            &:hover{
+                                color: $Primary-color;
+                            }
+                        }
+                    }
+                }
+            } 
+            .icon-number-otr{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 29px 0;
+                width: 100%;
+                background-color: $White-5;
+                transition: .4s;
+                &:hover{
+                    background-color: $Primary-color;
+                    .icon-otr{
+                        .icon{
+                            color: $Black;
+                        }
+                    }
+                    .number{
+                        color: $Black;
+                    }
+    
+                }
+                .icon-otr{
+                    padding-right: 12px;
+                    .icon{
+                        font-size: 24px;
+                        color: $Primary-color;
+                        transition: .4s;
+                    }
+                }
+                .number{
+                    color: $Primary-color;
+                    transition: .4s;
+                }
+            }
+        }
+    }
+}
+
+/*=====================================
+        Overlay End Here
+=====================================*/
+
+/*=====================================
+        Navbar Start Here
+=====================================*/
+
+.navbar-main{
+    background-color: $Black;
+    padding-left: 50px;
+    @include breakpoint($secreen-max-md){
+        padding-left: 0px;
+        padding: 20px;
+    }
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 998;
+    .nav-bar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo-otr{
+            .logo{
+                width: 90px;
+                height: 36px;
+                object-fit: contain;
+            }
+        }
+        .menu-otr{
+            @include breakpoint($secreen-max-md){
+                display: none;
+            }
+            .menu-ul{
+                display: flex;
+                align-items: center;
+                gap: 0 48px;
+                .menu-li{
+                    .menu-a{
+                        color: $Primary-color-40;
+                        transition: .3s;
+                        &:hover{
+                            color: $Primary-color;
+                        }
+                    }
+                }
+            }
+        }
+        .icon-number-otr{
+            display: flex;
+            align-items: center;
+            padding: 29px 50px;
+            background-color: $White-5;
+            transition: .4s;
+            @include breakpoint($secreen-max-md){
+                display: none;
+            }
+            &:hover{
+                background-color: $Primary-color;
+                .icon-otr{
+                    .icon{
+                        color: $Black;
+                    }
+                }
+                .number{
+                    color: $Black;
+                }
+
+            }
+            .icon-otr{
+                padding-right: 12px;
+                .icon{
+                    font-size: 24px;
+                    color: $Primary-color;
+                    transition: .4s;
+                }
+            }
+            .number{
+                color: $Primary-color;
+                transition: .4s;
+            }
+        }
+        .burger-icon-otr{
+            display: none;
+            align-items: center;
+            justify-content: center;
+            margin-right: 50px;
+            @include breakpoint($secreen-max-md){
+                margin-right: 0px;
+            }
+            width: 52px;
+            height: 52px;
+            background-color: $Primary-color-10;
+            transition: .3s;
+            @include breakpoint($secreen-max-md){
+                display: flex;
+            }
+            &:hover{
+                background-color: $Primary-color;
+                .burger-icon{
+                    color: $Black;
+                }
+            }
+            .burger-icon{
+                font-size: 24px;
+                color: $Primary-color;
+                transition: .3s;
+            }
+        }
+    }
+}
+
+/*=====================================
+        Navbar End Here
+=====================================*/
+
+/*=====================================
+        Hero Section Start Here
+=====================================*/
+
+    .hero-main{
+        position: relative;
+        overflow: hidden;
+        margin-top: 94px;
+        .img{
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            object-fit: cover;
+            @include breakpoint($secreen-max-md){
+                display: none;
+            }
+        }
+        .marquee-main{
+            position: absolute;
+            bottom: 72px;
+            left: 0px;
+            @include breakpoint($secreen-max-md){
+                display: none;
+            }
+            .ul-marquee{
+                display: flex;
+                .li-marquee{
+                    &:not(:last-child){
+                        margin-right: 14px;
+                    }
+                    font-size: 128px;
+                    color: $White-1;
+                }
+            }
+        }
+        .container{
+            .row-custom{
+                padding: 144px 0 300px 0;
+                @include breakpoint($secreen-max-md){
+                    padding: 42px 0 72px 0;
+                    text-align: center;
+                }
+                .col-content-otr{
+                    .col-content-inr{
+                        position: relative;
+                        z-index: 5;
+                        .heading{
+                            color: $White;
+                        }
+                        .desc{
+                            color: rgba(230, 230, 230, 0.65);
+                            padding: 28px 0 48px 0;
+                            @include breakpoint($secreen-xs){
+                                padding: 14px 0 22px 0;
+                            }
+                        }
+                        .action{
+                            display: flex;
+                            @include breakpoint($secreen-max-md){
+                                justify-content: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+/*=====================================
+        Hero Section End Here
+=====================================*/
+
+/*=====================================
+        we-handle Section start Here
+=====================================*/
+
+    .handle-section{
+        padding: 128px 0 0 0;
+        @include breakpoint($secreen-max-md){
+            padding: 0px 0 0 0;
+        }
+        .container{
+            .wrapper{
+                .heading{
+                    color: $White;
+                    text-align: center;
+                }
+            }
+            .row-custom{
+                padding: 72px 0 72px 0;
+                @include breakpoint($secreen-max-md){
+                    text-align: center;
+                }
+                @include breakpoint($secreen-max-md){
+                    flex-direction: column;
+                    gap: 40px 0;
+                }
+                .content-otr{
+                    .content-inr{
+                        .detail{
+                            color: $White-65;
+                        }
+                    }
+                }
+            }
+        }
+        .img-otr{
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+/*=====================================
+        we-handle Section end Here
+=====================================*/
+
+/*=====================================
+    hair-style Section Start Here
+=====================================*/
+
+.hair-style-main{
+    padding: 128px 0 128px 0;
+    @include breakpoint($secreen-xs){
+        padding: 72px 0 0 0;
+    }
+    .container{
+        .wrapper{
+            text-align: center;
+            .heading{
+                color: $White;
+                padding-bottom: 56px;
+            }
+        }
+        .row-custom{
+            display: flex;
+            justify-content: space-between;
+            @include breakpoint($secreen-max-md){
+                gap: 30px 0;
+            }
+            .col-img-otr{
+                .col-img-inr{
+                    .img1{
+                        width: 100%;
+                        height: 360px;
+                        border-radius: 4px;
+                        object-fit: cover;
+                        @include breakpoint($secreen-xs){
+                            height: 250px;
+                        }
+                    }
+                    .img4{
+                        margin-top: 26px;
+                        width: 100%;
+                        height: 360px;
+                        border-radius: 4px;
+                        object-fit: cover;
+                        @include breakpoint($secreen-xs){
+                            height: 250px;
+                        }
+                    }
+                }
+            }
+            .col-img-otr2{
+                .col-img-inr{
+                    .img5{
+                        width: 100%;
+                        height: 457px;
+                        border-radius: 4px;
+                        object-fit: cover;
+                        @include breakpoint($secreen-xs){
+                            height: 250px;
+                        }
+                    }
+                    .img3{
+                        margin-top: 26px;
+                        width: 100%;
+                        height: 263px;
+                        border-radius: 4px;
+                        object-fit: cover;
+                        @include breakpoint($secreen-xs){
+                            height: 250px;
+                        }
+                    }
+                }
+            }
+            .col-img-otr3{
+                .col-img-inr{
+                    .img2{
+                        width: 100%;
+                        height: 750px;
+                        border-radius: 4px;
+                        object-fit: cover;
+                        @include breakpoint($secreen-xs){
+                            height: 250px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*=====================================
+    hair-style Section End Here
+=====================================*/
+
+/*=====================================
+    Appointment Section Start Here
+=====================================*/
+
+.appointment-main{
+    background-color: $White-05;
+    position: relative;
+    .marquee-main{
+        position: absolute;
+        top: 92px;
+        @include breakpoint($secreen-max-md){
+            display: none;
+        }
+        .ul-marquee{
+            display: flex;
+            position: relative;
+            right: -1000px;
+            &:not(:last-child){
+                margin-bottom: 120px;
+            }
+            .li-marquee{
+                font-size: 128px;
+                color: $White-05;
+            }
+        }
+    }
+    
+    .container{
+        
+        .row-custom{
+            justify-content: center;
+            padding: 128px 0;
+            @include breakpoint($secreen-max-md){
+                padding: 72px 0;
+            }
+            position: relative;
+            z-index: 4;
+            .appointment-otr{
+                .appointment-inr{
+                    padding: 72px 97px;
+                    @include breakpoint($secreen-max-md){
+                        padding: 40px 45px;
+                    }
+                    @include breakpoint($secreen-xs){
+                        padding: 19px 12px;
+                    }
+                    background-color:  $Black-light;
+                    border-radius: 4px;
+                    .wrapper{
+                        padding-bottom: 72px;
+                        @include breakpoint($secreen-max-md){
+                            padding-bottom: 42px;
+                        }
+                        .heading{
+                            color: $White;
+                            text-align: center;
+                        }
+                    }
+                    .row-form{
+                        display: flex;
+                        gap: 30px 0;
+                        .input-otr{
+                            position: relative;
+                            .input{
+                                position: relative;
+                                z-index: 2;
+                                appearance: none;
+                                option{
+                                    color: white;
+                                    background-color:black;
+                                }
+
+                            }
+                            .icon-otr{
+                                position: absolute;
+                                z-index: 1;
+                                top: 12px;
+                                right: 24px;
+                                .icon{
+                                    font-size: 26px;
+                                    color: $White-65;
+                                }
+                            }
+                        }
+                    }
+                } 
+            }
+        }
+    } 
+}
+
+/*=====================================
+    Appointment Section End Here
+=====================================*/
+
+/*=====================================
+    Partner Section Start Here
+=====================================*/
+
+.partner-main{
+    padding: 142px 0;
+    @include breakpoint($secreen-max-md){
+        padding: 72px 0;
+    }
+    .container{
+       .row-custom{
+           justify-content: space-between;
+           align-items: baseline;
+           @include breakpoint($secreen-max-sm ){
+               gap: 40px 0;
+               flex-direction: column-reverse;
+               text-align: center;
+           }
+           .col-partners-otr{
+               .col-partners-inr{
+                   display: flex;
+                   flex-wrap: wrap;
+                   gap:70px;
+                   @include breakpoint($secreen-max-sm){
+                       gap: 35px;
+                       justify-content: center;
+                   }
+                .img-otr{
+
+                }
+               }
+           }
+           .col-content-otr{
+               .heading{
+                   color: $White;
+               }
+           }
+       }
+    }
+}
+
+/*=====================================
+    Partner Section End Here
+=====================================*/
+
+/*=====================================
+        Footer Start Here
+=====================================*/
+
+.footer-main{
+    background-color: $White-05;
+    padding: 24px 0;
+    .container-fluid{
+        .footer-inr{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include breakpoint($secreen-xs){
+                flex-direction: column;
+                align-items: center;
+                gap: 8px 0;
+            }
+            .logo-icon{
+                display: flex;
+                align-items: center;
+                .logo-otr{
+                    padding-right: 32px;
+                    .logo{
+                        width: 90px;
+                        height: 36px;
+                        object-fit: contain;
+                    }
+                }
+                .social-otr{
+                    @include breakpoint($secreen-max-md){
+                        display: none;
+                    }
+                    .social-ul{
+                        display: flex;
+                        align-items: center;
+                        gap: 0 16px;
+                        .social-li{
+                            .social-a{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 52px;
+                                height: 52px;
+                                border-radius: 100%;
+                                background-color: $White-05;
+                                transition: .3s;
+                                &:hover{
+                                    background-color: $Primary-color-10;
+                                }
+                                .icon{
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .desc{
+               color: $White-65;
+               .link{
+                   display: inline;
+                color: $White-65;
+                transition: .4s;
+                &:hover{
+                    color: $Primary-color;
+                }
+               }
+            }
+            .menu-otr{
+                .menu-ul{
+                    display: flex;
+                    align-items: center;
+                    gap: 0 48px;
+                    .menu-li{
+                        .menu-linkk{
+                            color: $Primary-color-40;
+                            transition: .3s;
+                            &:hover{
+                                color: $Primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*=====================================
+        Footer End Here
+=====================================*/
+
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+   opacity: 0;
+}
