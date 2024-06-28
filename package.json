@@ -1,4 +1,5 @@
 {
+    "homepage": "https://github.com/MuhammadEz/project1",
     "name": "Appedia",
     "version": "1.0.0",
     "description": "",
@@ -10,12 +11,16 @@
         "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
         "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
         "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
+        "build": "webpack --config webpack.config.js"
     },
     "author": "VistoThemes",
     "license": "",
     "dependencies": {
         "breakpoint-sass": "^2.7.1",
+        "gh-pages": "^6.1.1",
         "laravel-mix": "^5.0.0",
         "lite-server": "^2.5.4",
         "resolve-url-loader": "^3.1.0",
